@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thayla Silva Consolação do Carmo - Especialista em Gestão Comercial & Relacionamento com Clientes">
+    <meta name="author" content="Thayla Silva Consolação do Carmo">
+    <title>Thayla Silva Consolação do Carmo - Especialista Comercial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        
+        .contact-info span {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        
+        .header .tagline {
+            font-size: 1em;
+            opacity: 0.9;
+            font-style: italic;
+            border-top: 2px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            color: #f5576c;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f5576c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .about-box {
+            background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #f5576c;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .about-box p {
+            margin-bottom: 15px;
+        }
+        
+        .about-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #f5576c;
+        }
+        
+        .skill-category h3 {
+            color: #f093fb;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #f5576c;
+            font-weight: bold;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #f093fb;
+        }
+        
+        .experience-item h3 {
+            color: #f093fb;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .company {
+            color: #f5576c;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .period {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .experience-item ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .experience-item li {
+            margin: 6px 0;
+        }
+        
+        .education-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #f0f0f0;
+        }
+        
+        .education-item h3 {
+            color: #f5576c;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .education-item .institution {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .education-item .status {
+            display: inline-block;
+            background: #f5576c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+        
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        
+        .cert-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #f5576c;
+        }
+        
+        .cert-item strong {
+            color: #f093fb;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .cert-item .cert-org {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .tools-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .tool-tag {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .differentials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .differential-item {
+            background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-top: 3px solid #f5576c;
+        }
+        
+        .differential-item .icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .differential-item strong {
+            display: block;
+            color: #f093fb;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        
+        .differential-item p {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .quote {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #f5576c;
+            padding: 20px;
+            margin-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .differentials {
+                grid-template-columns: 1fr;
+            }
+            
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>THAYLA SILVA CONSOLAÇÃO DO CARMO</h1>
+            <div class="subtitle">Especialista em Gestão Comercial & Relacionamento com Clientes</div>
+            <div class="contact-info">
+                <span>📧 thayladocarmo1@gmail.com</span>
+                <span>📱 (11) 91645-0109</span>
+                <span>🚗 CNH B</span>
+            </div>
+            <div class="tagline">Analista Comercial | Estrategista de Vendas | Gestora de Carteiras B2B e B2C</div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">💡 SOBRE MIM</h2>
+                <div class="about-box">
+                    <p>
+                        Profissional comercial com <strong>excelente capacidade de comunicação e relacionamento interpessoal</strong>, especializada em construir conexões autênticas que geram resultados. Minha abordagem combina <strong>escuta ativa, empatia e persuasão estratégica</strong> para transformar oportunidades em parcerias duradouras.
+                    </p>
+                    <p>
+                        Com experiência consolidada em <strong>gestão de carteiras B2B e B2C</strong>, atuo desde a prospecção até o pós-venda, garantindo excelência em cada etapa da jornada do cliente. Domínio em <strong>ferramentas comerciais (SAP, Salesforce, Deak Tecnologia)</strong> e forte habilidade analítica para embasar decisões estratégicas com dados concretos.
+                    </p>
+                    <p>
+                        Destaco-me pela <strong>habilidade de negociação, resolução ágil de problemas e capacidade de criar relacionamentos de confiança</strong> que impulsionam vendas e fidelizam clientes. Experiência em coordenação de equipes comerciais, treinamentos e desenvolvimento de estratégias que maximizam performance e rentabilidade.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">💼 EXPERIÊNCIA PROFISSIONAL</h2>
+                
+                <div class="experience-item">
+                    <h3>Analista Comercial</h3>
+                    <div class="company">ENERGYTECH</div>
+                    <div class="period">Maio/2024 - Agosto/2025</div>
+                    <ul>
+                        <li><strong>Gestão de Relacionamento:</strong> Atendimento estratégico ao cliente com foco em experiência excepcional, solucionando dúvidas e oferecendo suporte consultivo pós-venda</li>
+                        <li><strong>Operações Comerciais:</strong> Realização de cotações precisas, follow-up proativo de pedidos e monitoramento rigoroso de status e faturamento</li>
+                        <li><strong>Análise de Desempenho:</strong> Desenvolvimento de relatórios de vendas detalhados e análises de performance para embasar decisões estratégicas da diretoria</li>
+                        <li><strong>Gestão de Processos:</strong> Responsável pela gestão completa de pedidos, incluindo devoluções e resolução de pendências comerciais com foco em redução de prejuízos</li>
+                        <li><strong>Comunicação Interfuncional:</strong> Colaboração estreita com equipes internas (logística, financeiro, produção) para garantir cumprimento de prazos e expectativas dos clientes</li>
+                        <li><strong>Controle de Qualidade:</strong> Monitoramento de entregas e garantia de excelência operacional em todas as etapas do processo comercial</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Analista Comercial & Gestora de Relacionamento</h3>
+                    <div class="company">Dinamo Promotora</div>
+                    <div class="period">Setembro/2022 - Abril/2024</div>
+                    <ul>
+                        <li><strong>Gestão de Performance:</strong> Foco estratégico em resultados de vendas dos parceiros com acompanhamento individualizado e mentorias personalizadas</li>
+                        <li><strong>Desenvolvimento de Equipe:</strong> Treinamento e capacitação de equipes de vendedores, desenvolvendo habilidades comerciais e técnicas de negociação</li>
+                        <li><strong>Análise Estratégica:</strong> Controle detalhado de resultados individuais (mensais, trimestrais e semestrais) com análise de percentual de vendas, crescimento e rentabilidade</li>
+                        <li><strong>Relacionamento Consultivo:</strong> Atendimento personalizado e estratégico aos parceiros de negócios, atuando como consultora comercial de confiança</li>
+                        <li><strong>Prospecção Ativa:</strong> Gestão eficiente de leads ativos e reativação de carteira inativa através de comunicação persuasiva e estratégica</li>
+                        <li><strong>Gestão de Carteira B2B:</strong> Manutenção e expansão de relacionamento com parceiros corporativos, fortalecendo parcerias de longo prazo</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Analista Comercial & Estrategista de Relacionamento</h3>
+                    <div class="company">SelfCare Makeup</div>
+                    <div class="period">Projeto Atual</div>
+                    <ul>
+                        <li><strong>Relacionamento Corporativo:</strong> Gestão de parcerias com empresas e áreas de RH focadas em bem-estar corporativo e benefícios empresariais</li>
+                        <li><strong>Consultoria de Negócios:</strong> Organização de consultorias personalizadas de maquiagem para clientes B2B e B2C</li>
+                        <li><strong>Expansão Digital:</strong> Apoio estratégico à expansão do e-commerce, fortalecendo presença digital e otimizando canais de venda online</li>
+                        <li><strong>Estratégia Comercial:</strong> Desenvolvimento e implementação de estratégias de vendas e relacionamento para mercados B2B e B2C</li>
+                        <li><strong>Networking Estratégico:</strong> Construção de rede de contatos corporativos e fortalecimento de parcerias comerciais</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">🎯 COMPETÊNCIAS COMERCIAIS</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>💬 Comunicação & Relacionamento</h3>
+                        <ul>
+                            <li>Comunicação Persuasiva</li>
+                            <li>Escuta Ativa</li>
+                            <li>Inteligência Emocional</li>
+                            <li>Networking Estratégico</li>
+                            <li>Gestão de Conflitos</li>
+                            <li>Atendimento Consultivo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>📊 Gestão Comercial</h3>
+                        <ul>
+                            <li>Gestão de Carteira B2B/B2C</li>
+                            <li>Análise de Vendas</li>
+                            <li>Gestão de Performance</li>
+                            <li>KPIs Comerciais</li>
+                            <li>Forecasting de Vendas</li>
+                            <li>Gestão de Processos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>🤝 Vendas & Negociação</h3>
+                        <ul>
+                            <li>Técnicas de Negociação</li>
+                            <li>Prospecção Ativa</li>
+                            <li>Fechamento de Vendas</li>
+                            <li>Follow-up Estratégico</li>
+                            <li>Retenção de Clientes</li>
+                            <li>Cross-selling e Up-selling</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>💻 Ferramentas & Tecnologia</h3>
+                        <ul>
+                            <li>SAP (Avançado)</li>
+                            <li>Salesforce CRM</li>
+                            <li>Deak Tecnologia</li>
+                            <li>Excel Avançado</li>
+                            <li>Análise de Dados</li>
+                            <li>Relatórios Comerciais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">🎓 FORMAÇÃO ACADÊMICA</h2>
+                
+                <div class="education-item">
+                    <h3>Gestão Comercial</h3>
+                    <div class="institution">Universidade São Judas Tadeu</div>
+                    <span class="status">Cursando desde Janeiro/2024</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">📚 CERTIFICAÇÕES & ESPECIALIZAÇÕES</h2>
+                <div class="certifications">
+                    <div class="cert-item">
+                        <strong>Estratégia de Negócios</strong>
+                        <div class="cert-org">2025</div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <strong>Educação Financeira</strong>
+                        <div class="cert-org">2025</div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <strong>Matemática Financeira</strong>
+                        <div class="cert-org">Udemy | 2023</div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <strong>Excel para Negócios</strong>
+                        <div class="cert-org">Udemy | 2023</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">🛠️ FERRAMENTAS & SISTEMAS</h2>
+                <div class="tools-cloud">
+                    <span class="tool-tag">SAP</span>
+                    <span class="tool-tag">Salesforce</span>
+                    <span class="tool-tag">Deak Tecnologia</span>
+                    <span class="tool-tag">Excel Avançado</span>
+                    <span class="tool-tag">CRM</span>
+                    <span class="tool-tag">Power BI</span>
+                    <span class="tool-tag">Gestão de Carteiras</span>
+                    <span class="tool-tag">Análise de Dados</span>
+                    <span class="tool-tag">ERP</span>
+                    <span class="tool-tag">Google Workspace</span>
+                    <span class="tool-tag">Microsoft Office</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">🌟 DIFERENCIAIS COMPETITIVOS</h2>
+                <div class="differentials">
+                    <div class="differential-item">
+                        <div class="icon">💬</div>
+                        <strong>Comunicação Excepcional</strong>
+                        <p>Habilidade natural de conectar pessoas e criar relacionamentos autênticos</p>
+                    </div>
+                    
+                    <div class="differential-item">
+                        <div class="icon">🎯</div>
+                        <strong>Foco em Resultados</strong>
+                        <p>Orientação estratégica para metas com análise constante de performance</p>
+                    </div>
+                    
+                    <div class="differential-item">
+                        <div class="icon">🤝</div>
+                        <strong>Relacionamento de Confiança</strong>
+                        <p>Construção de parcerias duradouras baseadas em transparência e valor</p>
+                    </div>
+                    
+                    <div class="differential-item">
+                        <div class="icon">📊</div>
+                        <strong>Visão Analítica</strong>
+                        <p>Decisões embasadas em dados e análise profunda de mercado</p>
+                    </div>
+                    
+                    <div class="differential-item">
+                        <div class="icon">⚡</div>
+                        <strong>Proatividade</strong>
+                        <p>Antecipação de necessidades e resolução ágil de problemas</p>
+                    </div>
+                    
+                    <div class="differential-item">
+                        <div class="icon">🎓</div>
+                        <strong>Aprendizado Contínuo</strong>
+                        <p>Busca constante por atualização e desenvolvimento profissional</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote">
+                "O sucesso em vendas não está apenas em fechar negócios, mas em construir relacionamentos que geram valor mútuo e duradouro."
+            </div>
+        </div>
+    </div>
+</body>
+</html>
