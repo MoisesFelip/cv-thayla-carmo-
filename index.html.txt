@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thayla Silva Consolação do Carmo - Especialista em Gestão Comercial & Relacionamento com Clientes">
+    <meta name="description" content="Currículo profissional de Thayla Silva Consolação do Carmo - Especialista em Gestão Comercial e Relacionamento com Clientes">
     <meta name="author" content="Thayla Silva Consolação do Carmo">
-    <title>Thayla Silva Consolação do Carmo - Especialista Comercial</title>
+    <meta name="keywords" content="analista comercial, gestão comercial, vendas B2B, vendas B2C, relacionamento com cliente">
+    <title>Thayla Silva Consolação do Carmo - CV</title>
     <style>
         * {
             margin: 0;
@@ -13,101 +14,109 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary-color: #2c5282;
+            --secondary-color: #1a365d;
+            --accent-color: #3182ce;
+            --text-dark: #1a202c;
+            --text-medium: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-medium: #edf2f7;
+            --border-color: #e2e8f0;
+            --white: #ffffff;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: var(--text-dark);
+            background: var(--bg-medium);
             padding: 20px;
         }
         
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: var(--white);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         
-        .header {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: var(--white);
             padding: 50px 40px;
-            text-align: center;
+            border-bottom: 4px solid var(--accent-color);
         }
         
-        .header h1 {
+        header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
-        .header .subtitle {
+        .subtitle {
             font-size: 1.3em;
+            font-weight: 400;
+            margin-bottom: 20px;
             opacity: 0.95;
-            font-weight: 300;
-            margin-bottom: 15px;
         }
         
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
-            margin-top: 15px;
+            margin-top: 20px;
             font-size: 0.95em;
         }
         
         .contact-info span {
-            background: rgba(255,255,255,0.2);
-            padding: 8px 15px;
-            border-radius: 20px;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
         
-        .header .tagline {
+        .tagline {
             font-size: 1em;
-            opacity: 0.9;
-            font-style: italic;
-            border-top: 2px solid rgba(255,255,255,0.3);
+            font-weight: 300;
+            border-top: 1px solid rgba(255,255,255,0.3);
             padding-top: 20px;
             margin-top: 20px;
         }
         
-        .content {
+        main {
             padding: 40px;
         }
         
-        .section {
-            margin-bottom: 40px;
+        section {
+            margin-bottom: 45px;
         }
         
-        .section-title {
-            font-size: 1.8em;
-            color: #f5576c;
+        h2 {
+            font-size: 1.6em;
+            color: var(--primary-color);
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #f5576c;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .about-box {
-            background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%);
+            background: var(--bg-light);
             padding: 25px;
-            border-radius: 15px;
-            border-left: 4px solid #f5576c;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-color);
             font-size: 1.05em;
             line-height: 1.8;
         }
         
-        .about-box p {
-            margin-bottom: 15px;
-        }
-        
-        .about-box p:last-child {
-            margin-bottom: 0;
+        .about-box p + p {
+            margin-top: 15px;
         }
         
         .skills-grid {
@@ -118,16 +127,17 @@
         }
         
         .skill-category {
-            background: #f8f9fa;
+            background: var(--bg-light);
             padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #f5576c;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-color);
         }
         
         .skill-category h3 {
-            color: #f093fb;
-            margin-bottom: 12px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
             font-size: 1.1em;
+            font-weight: 600;
         }
         
         .skill-category ul {
@@ -135,82 +145,90 @@
         }
         
         .skill-category li {
-            padding: 5px 0;
+            padding: 6px 0;
             padding-left: 20px;
             position: relative;
+            color: var(--text-medium);
         }
         
-        .skill-category li:before {
-            content: "▹";
+        .skill-category li::before {
+            content: "▸";
             position: absolute;
             left: 0;
-            color: #f5576c;
+            color: var(--accent-color);
             font-weight: bold;
         }
         
-        .experience-item {
-            margin-bottom: 25px;
+        article {
+            margin-bottom: 30px;
             padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            border-left: 4px solid #f093fb;
+            background: var(--bg-light);
+            border-radius: 4px;
+            border-left: 4px solid var(--primary-color);
         }
         
-        .experience-item h3 {
-            color: #f093fb;
+        article h3 {
+            color: var(--secondary-color);
             font-size: 1.3em;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: 600;
         }
         
-        .experience-item .company {
-            color: #f5576c;
+        .company {
+            color: var(--accent-color);
             font-weight: 600;
             font-size: 1.1em;
             margin-bottom: 5px;
         }
         
-        .experience-item .period {
-            color: #666;
+        .period {
+            color: var(--text-light);
             font-size: 0.9em;
             margin-bottom: 15px;
+            font-style: italic;
         }
         
-        .experience-item ul {
+        article ul {
             margin-left: 20px;
-            margin-top: 10px;
+            margin-top: 12px;
         }
         
-        .experience-item li {
-            margin: 6px 0;
+        article li {
+            margin: 8px 0;
+            color: var(--text-medium);
+            line-height: 1.6;
         }
         
         .education-item {
-            background: white;
+            background: var(--bg-light);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 4px;
             margin-bottom: 15px;
-            border: 2px solid #f0f0f0;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-color);
         }
         
         .education-item h3 {
-            color: #f5576c;
+            color: var(--primary-color);
             font-size: 1.2em;
             margin-bottom: 5px;
+            font-weight: 600;
         }
         
-        .education-item .institution {
-            color: #666;
+        .institution {
+            color: var(--text-light);
             font-size: 0.95em;
         }
         
-        .education-item .status {
+        .status {
             display: inline-block;
-            background: #f5576c;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 12px;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 3px;
             font-size: 0.85em;
-            margin-top: 5px;
+            margin-top: 8px;
+            font-weight: 500;
         }
         
         .certifications {
@@ -220,20 +238,21 @@
         }
         
         .cert-item {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 3px solid #f5576c;
+            background: var(--bg-light);
+            padding: 18px;
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-color);
         }
         
         .cert-item strong {
-            color: #f093fb;
+            color: var(--primary-color);
             display: block;
             margin-bottom: 5px;
+            font-weight: 600;
         }
         
-        .cert-item .cert-org {
-            color: #666;
+        .cert-org {
+            color: var(--text-light);
             font-size: 0.9em;
         }
         
@@ -245,82 +264,76 @@
         }
         
         .tool-tag {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 3px;
             font-size: 0.9em;
             font-weight: 500;
+            border: 1px solid var(--secondary-color);
         }
         
         .differentials {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            gap: 20px;
         }
         
         .differential-item {
-            background: linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%);
+            background: var(--bg-light);
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 4px;
             text-align: center;
-            border-top: 3px solid #f5576c;
+            border-top: 3px solid var(--accent-color);
         }
         
-        .differential-item .icon {
+        .icon {
             font-size: 2em;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            color: var(--primary-color);
         }
         
         .differential-item strong {
             display: block;
-            color: #f093fb;
+            color: var(--primary-color);
             margin-bottom: 8px;
             font-size: 1.05em;
+            font-weight: 600;
         }
         
         .differential-item p {
             font-size: 0.9em;
-            color: #666;
+            color: var(--text-light);
+            line-height: 1.5;
         }
         
-        .quote {
+        blockquote {
             text-align: center;
             font-style: italic;
             font-size: 1.1em;
-            color: #f5576c;
-            padding: 20px;
+            color: var(--text-medium);
+            padding: 25px;
             margin-top: 20px;
-            border-top: 2px solid #f0f0f0;
-            border-bottom: 2px solid #f0f0f0;
-        }
-        
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            
-            .container {
-                box-shadow: none;
-                border-radius: 0;
-            }
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+            background: var(--bg-light);
         }
         
         @media (max-width: 768px) {
-            .header h1 {
+            header h1 {
                 font-size: 1.8em;
             }
             
-            .header .subtitle {
+            .subtitle {
                 font-size: 1.1em;
             }
             
-            .content {
+            main {
                 padding: 25px;
             }
             
-            .skills-grid {
+            .skills-grid,
+            .differentials {
                 grid-template-columns: 1fr;
             }
             
@@ -328,33 +341,40 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            
-            .differentials {
-                grid-template-columns: 1fr;
+        }
+        
+        @media print {
+            body {
+                background: var(--white);
+                padding: 0;
             }
             
-            .certifications {
-                grid-template-columns: 1fr;
+            .container {
+                box-shadow: none;
+            }
+            
+            header {
+                background: var(--secondary-color);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <h1>THAYLA SILVA CONSOLAÇÃO DO CARMO</h1>
-            <div class="subtitle">Especialista em Gestão Comercial & Relacionamento com Clientes</div>
-            <div class="contact-info">
+            <p class="subtitle">Especialista em Gestão Comercial &amp; Relacionamento com Clientes</p>
+            <nav class="contact-info" aria-label="Informações de contato">
                 <span>📧 thayladocarmo1@gmail.com</span>
                 <span>📱 (11) 91645-0109</span>
                 <span>🚗 CNH B</span>
-            </div>
-            <div class="tagline">Analista Comercial | Estrategista de Vendas | Gestora de Carteiras B2B e B2C</div>
-        </div>
+            </nav>
+            <p class="tagline">Analista Comercial | Estrategista de Vendas | Gestora de Carteiras B2B e B2C</p>
+        </header>
         
-        <div class="content">
-            <div class="section">
-                <h2 class="section-title">💡 SOBRE MIM</h2>
+        <main>
+            <section id="sobre">
+                <h2>💡 Sobre Mim</h2>
                 <div class="about-box">
                     <p>
                         Profissional comercial com <strong>excelente capacidade de comunicação e relacionamento interpessoal</strong>, especializada em construir conexões autênticas que geram resultados. Minha abordagem combina <strong>escuta ativa, empatia e persuasão estratégica</strong> para transformar oportunidades em parcerias duradouras.
@@ -366,15 +386,15 @@
                         Destaco-me pela <strong>habilidade de negociação, resolução ágil de problemas e capacidade de criar relacionamentos de confiança</strong> que impulsionam vendas e fidelizam clientes. Experiência em coordenação de equipes comerciais, treinamentos e desenvolvimento de estratégias que maximizam performance e rentabilidade.
                     </p>
                 </div>
-            </div>
+            </section>
 
-            <div class="section">
-                <h2 class="section-title">💼 EXPERIÊNCIA PROFISSIONAL</h2>
+            <section id="experiencia">
+                <h2>💼 Experiência Profissional</h2>
                 
-                <div class="experience-item">
+                <article>
                     <h3>Analista Comercial</h3>
-                    <div class="company">ENERGYTECH</div>
-                    <div class="period">Maio/2024 - Agosto/2025</div>
+                    <p class="company">ENERGYTECH</p>
+                    <p class="period">Maio/2024 - Agosto/2025</p>
                     <ul>
                         <li><strong>Gestão de Relacionamento:</strong> Atendimento estratégico ao cliente com foco em experiência excepcional, solucionando dúvidas e oferecendo suporte consultivo pós-venda</li>
                         <li><strong>Operações Comerciais:</strong> Realização de cotações precisas, follow-up proativo de pedidos e monitoramento rigoroso de status e faturamento</li>
@@ -383,12 +403,12 @@
                         <li><strong>Comunicação Interfuncional:</strong> Colaboração estreita com equipes internas (logística, financeiro, produção) para garantir cumprimento de prazos e expectativas dos clientes</li>
                         <li><strong>Controle de Qualidade:</strong> Monitoramento de entregas e garantia de excelência operacional em todas as etapas do processo comercial</li>
                     </ul>
-                </div>
+                </article>
                 
-                <div class="experience-item">
-                    <h3>Analista Comercial & Gestora de Relacionamento</h3>
-                    <div class="company">Dinamo Promotora</div>
-                    <div class="period">Setembro/2022 - Abril/2024</div>
+                <article>
+                    <h3>Analista Comercial &amp; Gestora de Relacionamento</h3>
+                    <p class="company">Dinamo Promotora</p>
+                    <p class="period">Setembro/2022 - Abril/2024</p>
                     <ul>
                         <li><strong>Gestão de Performance:</strong> Foco estratégico em resultados de vendas dos parceiros com acompanhamento individualizado e mentorias personalizadas</li>
                         <li><strong>Desenvolvimento de Equipe:</strong> Treinamento e capacitação de equipes de vendedores, desenvolvendo habilidades comerciais e técnicas de negociação</li>
@@ -397,12 +417,12 @@
                         <li><strong>Prospecção Ativa:</strong> Gestão eficiente de leads ativos e reativação de carteira inativa através de comunicação persuasiva e estratégica</li>
                         <li><strong>Gestão de Carteira B2B:</strong> Manutenção e expansão de relacionamento com parceiros corporativos, fortalecendo parcerias de longo prazo</li>
                     </ul>
-                </div>
+                </article>
 
-                <div class="experience-item">
-                    <h3>Analista Comercial & Estrategista de Relacionamento</h3>
-                    <div class="company">SelfCare Makeup</div>
-                    <div class="period">Projeto Atual</div>
+                <article>
+                    <h3>Analista Comercial &amp; Estrategista de Relacionamento</h3>
+                    <p class="company">SelfCare Makeup</p>
+                    <p class="period">Projeto Atual</p>
                     <ul>
                         <li><strong>Relacionamento Corporativo:</strong> Gestão de parcerias com empresas e áreas de RH focadas em bem-estar corporativo e benefícios empresariais</li>
                         <li><strong>Consultoria de Negócios:</strong> Organização de consultorias personalizadas de maquiagem para clientes B2B e B2C</li>
@@ -410,14 +430,14 @@
                         <li><strong>Estratégia Comercial:</strong> Desenvolvimento e implementação de estratégias de vendas e relacionamento para mercados B2B e B2C</li>
                         <li><strong>Networking Estratégico:</strong> Construção de rede de contatos corporativos e fortalecimento de parcerias comerciais</li>
                     </ul>
-                </div>
-            </div>
+                </article>
+            </section>
 
-            <div class="section">
-                <h2 class="section-title">🎯 COMPETÊNCIAS COMERCIAIS</h2>
+            <section id="competencias">
+                <h2>🎯 Competências Comerciais</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>💬 Comunicação & Relacionamento</h3>
+                        <h3>💬 Comunicação &amp; Relacionamento</h3>
                         <ul>
                             <li>Comunicação Persuasiva</li>
                             <li>Escuta Ativa</li>
@@ -441,7 +461,7 @@
                     </div>
                     
                     <div class="skill-category">
-                        <h3>🤝 Vendas & Negociação</h3>
+                        <h3>🤝 Vendas &amp; Negociação</h3>
                         <ul>
                             <li>Técnicas de Negociação</li>
                             <li>Prospecção Ativa</li>
@@ -453,7 +473,7 @@
                     </div>
                     
                     <div class="skill-category">
-                        <h3>💻 Ferramentas & Tecnologia</h3>
+                        <h3>💻 Ferramentas &amp; Tecnologia</h3>
                         <ul>
                             <li>SAP (Avançado)</li>
                             <li>Salesforce CRM</li>
@@ -464,45 +484,45 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="section">
-                <h2 class="section-title">🎓 FORMAÇÃO ACADÊMICA</h2>
+            <section id="formacao">
+                <h2>🎓 Formação Acadêmica</h2>
                 
                 <div class="education-item">
                     <h3>Gestão Comercial</h3>
-                    <div class="institution">Universidade São Judas Tadeu</div>
+                    <p class="institution">Universidade São Judas Tadeu</p>
                     <span class="status">Cursando desde Janeiro/2024</span>
                 </div>
-            </div>
+            </section>
 
-            <div class="section">
-                <h2 class="section-title">📚 CERTIFICAÇÕES & ESPECIALIZAÇÕES</h2>
+            <section id="certificacoes">
+                <h2>📚 Certificações &amp; Especializações</h2>
                 <div class="certifications">
                     <div class="cert-item">
                         <strong>Estratégia de Negócios</strong>
-                        <div class="cert-org">2025</div>
+                        <p class="cert-org">2025</p>
                     </div>
                     
                     <div class="cert-item">
                         <strong>Educação Financeira</strong>
-                        <div class="cert-org">2025</div>
+                        <p class="cert-org">2025</p>
                     </div>
                     
                     <div class="cert-item">
                         <strong>Matemática Financeira</strong>
-                        <div class="cert-org">Udemy | 2023</div>
+                        <p class="cert-org">Udemy | 2023</p>
                     </div>
                     
                     <div class="cert-item">
                         <strong>Excel para Negócios</strong>
-                        <div class="cert-org">Udemy | 2023</div>
+                        <p class="cert-org">Udemy | 2023</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="section">
-                <h2 class="section-title">🛠️ FERRAMENTAS & SISTEMAS</h2>
+            <section id="ferramentas">
+                <h2>🛠️ Ferramentas &amp; Sistemas</h2>
                 <div class="tools-cloud">
                     <span class="tool-tag">SAP</span>
                     <span class="tool-tag">Salesforce</span>
@@ -516,53 +536,53 @@
                     <span class="tool-tag">Google Workspace</span>
                     <span class="tool-tag">Microsoft Office</span>
                 </div>
-            </div>
+            </section>
 
-            <div class="section">
-                <h2 class="section-title">🌟 DIFERENCIAIS COMPETITIVOS</h2>
+            <section id="diferenciais">
+                <h2>🌟 Diferenciais Competitivos</h2>
                 <div class="differentials">
                     <div class="differential-item">
-                        <div class="icon">💬</div>
+                        <div class="icon" aria-hidden="true">💬</div>
                         <strong>Comunicação Excepcional</strong>
                         <p>Habilidade natural de conectar pessoas e criar relacionamentos autênticos</p>
                     </div>
                     
                     <div class="differential-item">
-                        <div class="icon">🎯</div>
+                        <div class="icon" aria-hidden="true">🎯</div>
                         <strong>Foco em Resultados</strong>
                         <p>Orientação estratégica para metas com análise constante de performance</p>
                     </div>
                     
                     <div class="differential-item">
-                        <div class="icon">🤝</div>
+                        <div class="icon" aria-hidden="true">🤝</div>
                         <strong>Relacionamento de Confiança</strong>
                         <p>Construção de parcerias duradouras baseadas em transparência e valor</p>
                     </div>
                     
                     <div class="differential-item">
-                        <div class="icon">📊</div>
+                        <div class="icon" aria-hidden="true">📊</div>
                         <strong>Visão Analítica</strong>
                         <p>Decisões embasadas em dados e análise profunda de mercado</p>
                     </div>
                     
                     <div class="differential-item">
-                        <div class="icon">⚡</div>
+                        <div class="icon" aria-hidden="true">⚡</div>
                         <strong>Proatividade</strong>
                         <p>Antecipação de necessidades e resolução ágil de problemas</p>
                     </div>
                     
                     <div class="differential-item">
-                        <div class="icon">🎓</div>
+                        <div class="icon" aria-hidden="true">🎓</div>
                         <strong>Aprendizado Contínuo</strong>
                         <p>Busca constante por atualização e desenvolvimento profissional</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="quote">
+            <blockquote>
                 "O sucesso em vendas não está apenas em fechar negócios, mas em construir relacionamentos que geram valor mútuo e duradouro."
-            </div>
-        </div>
+            </blockquote>
+        </main>
     </div>
 </body>
 </html>
